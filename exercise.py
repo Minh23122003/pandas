@@ -1,4 +1,5 @@
 import  pandas as pd
+import numpy as np
 data = pd.read_csv('D:\data.tsv', sep='\t')
 
 
@@ -73,6 +74,26 @@ def cau15():
     print(int(data['year'].mean()))
 
 
+def cau16():
+    ages = data['year']
+    print(ages.mean())
+
+
+def cau17():
+    s = pd.Series(['banana', 42])
+    return s
+
+
+def cau18():
+    s = pd.Series(['Wes MCKinney', 'Creator of Pandas'], index=['Person', 'Who'])
+    return s
+
+
+def cau19():
+    dict = {'Occupation':['Chemist', 'Statistician'], 'Born': ['1920-07-25', '1876-06-13']
+        , 'Died':['1958-04-16', '1937-10-16'], 'Age': [37, 61]}
+    df = pd.DataFrame(dict, index=['Franklin','Gosset'])
+    return df
 
 if __name__ == '__main__':
-    cau15()
+    print(cau19())
